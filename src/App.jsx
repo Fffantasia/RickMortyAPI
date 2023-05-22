@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { BiSearchAlt } from 'react-icons/bi';
 import { IconContext } from 'react-icons';
-// animacion de subida al cambiar pagina y modificar botones de cambio pagina
+import logo from './rick-and-morty.png';
+// animacion de subida al cambiar pagina y modificar botones de cambio pagina (van mal cuando hace el filter si solo hay una pagina)
 function App() {
   const [page, setPage] = useState(1);
   const [path, setPath] = useState(`https://rickandmortyapi.com/api/character/?page=1`);
@@ -79,7 +80,7 @@ function App() {
     return(
       <div className='App'>
         <div className='menu-cont'>
-          <div className='logo-cont'><img src={`rick and morty.png`}/></div>
+          <div className='logo-cont'><img src={logo}/></div>
           <div className='navbar-cont'>
             <IconContext.Provider value={{color: "#16acc9", size: 60}}><BiSearchAlt style={{stroke: "#d1d94b", strokeWidth: "1"}}/></IconContext.Provider>
             <div className='navbar'>
@@ -98,7 +99,7 @@ function App() {
     return (
       <div className='App'>
         <div className='menu-cont'>
-          <div className='logo-cont'><img src={`https://occ-0-56-1555.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABekGfcjcxKQH35sJxlr2te1JNYCwXqpovwMvTf4gzZ1ihzzUY0M8YcEijgvL_ClD5aIMWEY-hKIZVmgthEVssV7SthGRm2xVXkuwzpphv6u0.png?r=a66`}/></div>
+          <div className='logo-cont'><img src={logo}/></div>
           <div className='navbar-cont'>
             <IconContext.Provider value={{color: "#16acc9", size: 60}}><BiSearchAlt style={{stroke: "#d1d94b", strokeWidth: "1"}}/></IconContext.Provider>
             <div className='navbar'>
